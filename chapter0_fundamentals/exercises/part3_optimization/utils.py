@@ -162,7 +162,7 @@ def plot_fn_with_points(
         x, y = xys.T
         z = fn(x, y)
         fig.add_trace(  # type: ignore
-            go.Scatter3d(x=x, y=y, z=z, mode="lines", line=dict(width=6, color=color), showlegend=False),
+            go.Scatter3d(x=x, y=y, z=z, mode="lines", line=dict(width=18, color=color), showlegend=False),
             row=1,
             col=1,
         )
