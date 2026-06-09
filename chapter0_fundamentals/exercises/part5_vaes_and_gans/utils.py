@@ -80,6 +80,7 @@ def visualise_input(
     """
     # Make a dataframe for scatter (px.scatter is more convenient to use when supplied with a dataframe)
     latent_vectors = latent_vectors.cpu().numpy()
+    holdout_latent_vectors = holdout_latent_vectors.cpu().numpy()
     labels = [str(label) for label in labels.cpu().numpy()]  # necessary for discrete color use
     df = pd.DataFrame({"dim1": latent_vectors[:, 0], "dim2": latent_vectors[:, 1], "label": labels})
     df = df.sort_values(by="label")
